@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Control_Flow_Loops_Iteration_Statements
 {
@@ -10,6 +6,33 @@ namespace Control_Flow_Loops_Iteration_Statements
     {
         static void Main(string[] args)
         {
+            // Random Class In C#
+
+            var randomIntegerNumber = new Random();
+            for (var i = 0; i < 10; i++)
+                Console.WriteLine(randomIntegerNumber.Next());
+                Console.WriteLine("Generates the Min Number and Max Number within the range: " + randomIntegerNumber.Next(1,10));
+
+
+            Console.WriteLine((int)'a');
+
+            var randomIntegerNumbeer = new Random();
+            for (var i = 0; i < 10; i++)  
+                Console.Write((char)randomIntegerNumber.Next(97, 122));
+            Console.WriteLine();
+
+
+            const int passwordLength = 11;
+            var randomCharacter = new Random();
+
+            var charBuffer = new char[passwordLength];
+
+            for (var m = 0; m < passwordLength; m++)
+                charBuffer[m] = (char)('a' + randomCharacter.Next(0, 26));
+
+            var password = new string(charBuffer);
+            Console.WriteLine(password);
+
             var j = 0;
             // do while loop
             do
@@ -82,8 +105,7 @@ namespace Control_Flow_Loops_Iteration_Statements
                     continue;
                 }
                 break;
-
-              
+            
 
             }
 
